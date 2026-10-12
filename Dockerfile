@@ -1,0 +1,7 @@
+FROM python:3.13-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PORT=8080
+WORKDIR /app
+COPY --chown=10001:0 src/ ./src/
+USER 10001:0
+EXPOSE 8080
+CMD ["python", "-m", "src.app"]
