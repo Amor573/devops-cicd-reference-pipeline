@@ -22,7 +22,7 @@ jobs:
         run: python -m compileall -q src tests
       - name: HTTP tests
         run: python -m unittest discover -s tests -v
-      - uses: azure/setup-helm@v4.3.0
+      - uses: azure/setup-helm@v5.0.1
         with:
           version: v3.17.3
       - name: Helm lint and render
